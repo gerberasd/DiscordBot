@@ -15,7 +15,7 @@ async def on_message(message):
     # 「!test」で始まる場合
     if message.content.startswith("!test"):
         m = "HelloWorld!"
-        # メッセージが送られてきたチャンネルへメッセージを送る
+        # メッセージが送られてきたチャンネルへHelloWorld!と送信
         await client.send_message(message.channel, m)
 
 client.run("とーくんをここにはりつけ")
