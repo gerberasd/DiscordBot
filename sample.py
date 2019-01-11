@@ -2,7 +2,7 @@ import discord
 import random
 import asyncio
 
-client = discord.Client() # Ú‘±‚Ég—p‚·‚éƒIƒuƒWƒFƒNƒg
+client = discord.Client() # æ¥ç¶šã«ä½¿ç”¨ã™ã‚‹ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ
 
 @client.event
 async def on_ready():
@@ -13,32 +13,32 @@ async def on_ready():
 
 @client.event
 async def on_reaction_add(reaction, user):
-    # authorEEEƒŠƒAƒNƒVƒ‡ƒ“‚ª‚Â‚¢‚½ƒƒbƒZ[ƒW‚ğ‘‚¢‚½l
+    # authorãƒ»ãƒ»ãƒ»ãƒªã‚¢ã‚¯ã‚·ãƒ§ãƒ³ãŒã¤ã„ãŸãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’æ›¸ã„ãŸäºº
     author = reaction.message.author
-    await client.send_message(author, f"{user} ‚³‚ñ‚ªƒŠƒAƒNƒVƒ‡ƒ“‚ğ‚µ‚Ü‚µ‚½")
+    await client.send_message(author, f"{user} ã•ã‚“ãŒãƒªã‚¢ã‚¯ã‚·ãƒ§ãƒ³ã‚’ã—ã¾ã—ãŸ")
 
 @client.event
 async def on_message(message):
-    if message.content.startswith('w’èƒRƒ}ƒ“ƒh‚É•Ï‚¦‚Ä‚­‚¾‚³‚¢'):
+    if message.content.startswith('æŒ‡å®šã‚³ãƒãƒ³ãƒ‰ã«å¤‰ãˆã¦ãã ã•ã„'):
         reply = '''
-‚±
-@‚ñ
-@@‚È
-@@@Š´
-@@@@‚¶
-@@@@@‚Å
-@@@@@‰ü
-@@@@s
-@@@‚Å
-@@‚«
-@‚Ü
-‚·
+ã“
+ã€€ã‚“
+ã€€ã€€ãª
+ã€€ã€€ã€€æ„Ÿ
+ã€€ã€€ã€€ã€€ã˜
+ã€€ã€€ã€€ã€€ã€€ã§
+ã€€ã€€ã€€ã€€ã€€æ”¹
+ã€€ã€€ã€€ã€€è¡Œ
+ã€€ã€€ã€€ã§
+ã€€ã€€ã
+ã€€ã¾
+ã™
 
-«ƒ\[ƒXƒR[ƒh‚à•\¦‚Å‚«‚Ü‚·«
+â†“ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ã‚‚è¡¨ç¤ºã§ãã¾ã™â†“
 ```python
-import discord #‚¨‚Ü‚¶‚È‚¢
+import discord #ãŠã¾ã˜ãªã„
 
-client = discord.Client() #‚¨‚Ü‚¶‚È‚¢
+client = discord.Client() #ãŠã¾ã˜ãªã„
 
 @client.event
 async def on_ready():
@@ -46,43 +46,33 @@ async def on_ready():
     print(client.user.name)
     print(client.user.id)
     print('------')
-    # ‹N“®Šm”F
+    # èµ·å‹•ç¢ºèª
 
 @client.event
 async def on_message(message):
-    # u!testv‚Ån‚Ü‚éê‡
+    # ã€Œ!testã€ã§å§‹ã¾ã‚‹å ´åˆ
     if message.content.startswith("!test"):
         m = "HelloWorld!"
-        # ƒƒbƒZ[ƒW‚ª‘—‚ç‚ê‚Ä‚«‚½ƒ`ƒƒƒ“ƒlƒ‹‚ÖHelloWorld!‚Æ‘—M
+        # ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ãŒé€ã‚‰ã‚Œã¦ããŸãƒãƒ£ãƒ³ãƒãƒ«ã¸HelloWorld!ã¨é€ä¿¡
         await client.send_message(message.channel, m)
 
-client.run("‚Æ[‚­‚ñ‚ğ‚±‚±‚É‚Í‚è‚Â‚¯") #ƒg[ƒNƒ“‚ğ“\‚è•t‚¯‚Ä‰º‚³‚¢
+client.run("ã¨ãƒ¼ãã‚“ã‚’ã“ã“ã«ã¯ã‚Šã¤ã‘") #ãƒˆãƒ¼ã‚¯ãƒ³ã‚’è²¼ã‚Šä»˜ã‘ã¦ä¸‹ã•ã„
 ```
                 '''
         await client.send_message(message.channel, reply)
 
-    if message.content.startswith("w’èƒRƒ}ƒ“ƒh‚É•Ï‚¦‚Ä‚­‚¾‚³‚¢"): # w’èƒ`ƒƒƒ“ƒlƒ‹‚Ö”­Œ¾
-        channel = client.get_channel('ƒ`ƒƒƒ“ƒlƒ‹ID‚ğ‚±‚±‚Ö')
-        m = "@everyone ’Ê˜b’†IQ‰ÁÒ•åW’†‚Å‚·B•·‚«ê‚Å‚à‚Ç‚¤‚¼I"
+    if message.content.startswith("æŒ‡å®šã‚³ãƒãƒ³ãƒ‰ã«å¤‰ãˆã¦ãã ã•ã„"): # æŒ‡å®šãƒãƒ£ãƒ³ãƒãƒ«ã¸ç™ºè¨€
+        channel = client.get_channel('ãƒãƒ£ãƒ³ãƒãƒ«IDã‚’ã“ã“ã¸')
+        m = "@everyone é€šè©±ä¸­ï¼å‚åŠ è€…å‹Ÿé›†ä¸­ã§ã™ã€‚èãå°‚ã§ã‚‚ã©ã†ãï¼"
         await client.send_message(channel, m)
 
-    if message.content.startswith('w’èƒRƒ}ƒ“ƒh‚É•Ï‚¦‚Ä‚­‚¾‚³‚¢'): # ‰ï˜b‘Síœ
-        clean_flag = True
-        while (clean_flag):
-            msgs = [msg async for msg in client.logs_from(message.channel)]
-            if len(msgs) > 1: # 1”­Œ¾ˆÈ‰º‚Ådelete_messages‚·‚é‚ÆƒGƒ‰[
-                await client.delete_messages(msgs)
-            else:
-                clean_flag = False
-                await client.send_message(message.channel, 'ƒƒO‚Ìíœ‚ªŠ®—¹‚µ‚Ü‚µ‚½')
-
-    if message.content.startswith("w’èƒRƒ}ƒ“ƒh‚É•Ï‚¦‚Ä‚­‚¾‚³‚¢"): # ‰Û‘è‹ÈƒTƒ“ƒvƒ‹
+    if message.content.startswith("æŒ‡å®šã‚³ãƒãƒ³ãƒ‰ã«å¤‰ãˆã¦ãã ã•ã„"): # èª²é¡Œæ›²ã‚µãƒ³ãƒ—ãƒ«
         number = random.randint(1,2)
         if number == 1:         
-            reply = 'Opfer(ƒIƒ“ƒQƒL)'
+            reply = 'Opfer(ã‚ªãƒ³ã‚²ã‚­)'
             await client.send_message(message.channel, reply)
         else:        
-            reply = 'Titania(ƒIƒ“ƒQƒL)'
+            reply = 'Titania(ã‚ªãƒ³ã‚²ã‚­)'
             await client.send_message(message.channel, reply)
 
-client.run('ƒg[ƒNƒ“‚ğ‚±‚±‚É')
+client.run('ãƒˆãƒ¼ã‚¯ãƒ³ã‚’ã“ã“ã«')
